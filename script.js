@@ -5,7 +5,7 @@ $(document).ready(function(){
       
       var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
       var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-      var dd = date+' '+time;
+      var d = date+' '+time;
       var confirmed1 = result.confirmed;
       var confirmed2 = result.cChanges;
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
       var recovered1 = result.recovered;
       var recovered2=result.rChanges;
 
-      $("#update_date_time").text(dd);
+      $("#update_date_time").text(d);
       $("#confirmed1").text(confirmed1);
       $("#confirmed2").text(confirmed2);
       $("#death1").text(death1);
