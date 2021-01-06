@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-lg-12 mb-5 text-center">
+        <div class="heading-text">
+            <h3>INDIA</h3>
+          <h3> COVID-19 DASHBOARD</h3>
+          <p>Last Update: <span id="update_date_time"></span><span class="blink_me"><i class="fa fa-circle" style="font-size:12px;color: #73ef5d; padding-left: 10px;"></i></i></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2">Total Confirmed</h6>
+            <h5 id="confirmed1" class="card-title count" style="color: #b57cff;">0</h5>
+             <h6 class="card-subtitle mb-2 today-details" style="color: #b57cff;">Today: <span id="confirmed2" class="count">0</span></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2">Total Deaths</h6>
+              <h5 id="death1" class="card-title count" style="color: #ff575f;"><span class="count">0</span></h5>
+              <h6 class="card-subtitle mb-2 today-details" style="color: #ff575f;">Today: <span id="death2" class="count">0</span></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2">Total Active</h6>
+              <h5 id="active1" class="card-title count" style="color: #f5b932;">0</h5>
+              <h6 class="card-subtitle mb-2 today-details" style="color: #f5b932;">active cases: <span id="active2" class="count">0</span></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2">Total Recovered</h6>
+              <h5 id="recovered1" class="card-title count" style="color: #73ef5d;">0</h5>
+              <h6 class="card-subtitle mb-2 today-details" style="color: #73ef5d;">Today: <span id="recovered2" class="count">0</span></h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
