@@ -2,6 +2,10 @@ $(document).ready(function(){
     $.get("https://api.covidindiatracker.com/total.json", function(result){
       console.log(result);
       var d=new Date();
+      
+      var date = d.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      var time = d.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var dd = date+' '+time;
       var confirmed1 = result.confirmed;
       var confirmed2 = result.cChanges;
 
@@ -14,7 +18,7 @@ $(document).ready(function(){
       var recovered1 = result.recovered;
       var recovered2=result.rChanges;
 
-      $("#update_date_time").text(d);
+      $("#update_date_time").text(dd);
       $("#confirmed1").text(confirmed1);
       $("#confirmed2").text(confirmed2);
       $("#death1").text(death1);
