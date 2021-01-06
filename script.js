@@ -3,8 +3,8 @@ $(document).ready(function(){
       console.log(result);
       var d=new Date();
       
-      var date = d.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      var time = d.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+      var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
       var dd = date+' '+time;
       var confirmed1 = result.confirmed;
       var confirmed2 = result.cChanges;
