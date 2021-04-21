@@ -6,6 +6,7 @@ $(document).ready(function(){
       var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
       var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
       var d = date+' '+time;
+      var dd=result.statewise[5].lastupdatedtime;
       var confirmed1 = result.statewise[5].confirmed;
       var confirmed2 = result.statewise[5].deltaconfirmed;
 
@@ -20,7 +21,7 @@ $(document).ready(function(){
       var recovered1 = result.statewise[5].recovered;
       var recovered2=result.statewise[5].deltarecovered;
 
-      $("#update_date_time").text(d);
+      $("#update_date_time").text(dd);
       $("#confirmed1").text(confirmed1);
       $("#confirmed2").text(confirmed2);
       $("#death1").text(death1);
