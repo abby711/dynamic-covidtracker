@@ -1,22 +1,24 @@
 $(document).ready(function(){
-    $.get("https://api.covidindiatracker.com/total.json", function(result){
+    $.get("https://api.covid19india.org/data.json", function(result){
       console.log(result);
       var d=new Date();
       
       var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
       var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
       var d = date+' '+time;
-      var confirmed1 = result.confirmed;
-      var confirmed2 = result.cChanges;
+      var confirmed1 = result.statewise[5].confirmed;
+      var confirmed2 = result.statewise[5].deltaconfirmed;
 
-      var death1 = result.deaths;
-      var death2 = result.dChanges;
+      var death1 = result.statewise[5].deaths;
+      var death2 = result.statewise[5].deltadeaths;
 
-      var active1 = result.active;
-      var active2 = result.aChanges;
+      var active1 = result.statewise[5].active;
+      //var active2 = result.statewise[5].delta;
+      var active2=result.statewise[5].deltaconfirmed-active1;
+      if (active2<0) active2=active2*-1;
 
-      var recovered1 = result.recovered;
-      var recovered2=result.rChanges;
+      var recovered1 = result.statewise[5].recovered;
+      var recovered2=result.statewise[5].deltarecovered;
 
       $("#update_date_time").text(d);
       $("#confirmed1").text(confirmed1);
